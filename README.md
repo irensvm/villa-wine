@@ -107,23 +107,22 @@ FORM:
 | GET    | /storage         | redirects to storage page                           |
 | GET    | /storage/addwine | redirect to add wine form  add wine button          |
 | POST   | /storage/addwine | when the wine is created, redirect to add wine form |
-
-| GET     | /storage/:id | redirect to wine details   magnifying glass button       |
-| POST    | /storage/:id | redirects to storage page   Open wine                    |  
-| PUT     | /storage/:id | redirects to wine details page     EDIT WINE             |   
-| DELETE  | /storage/:id | redirects to storage page   Delete wine                  |  
-| GET     | /storage/    | redirect to result wines                                 |
+| GET    | /storage/:id     | redirect to wine details   magnifying glass button  |
+| POST   | /storage/:id     | redirects to storage page   Open wine               |
+| PUT    | /storage/:id     | redirects to wine details page     EDIT WINE        |
+| DELETE | /storage/:id     | redirects to storage page   Delete wine             |
+| GET    | /storage/        | redirect to result wines                            |
 
 
 ## OPENED WINES 
 
-| Method | URL          | Description                                       |
-| ------ | ------------ | ------------------------------------------------- |
-| GET    | /open        | redirects to open wine's page                     |
-| GET    | /open/:id    | redirect to wine details  magnifying glass button |
-| POST   | /open/:id    | redirects to storage page   Open wine             |
-| PUT    | /open/:id    | redirects to wine details page     EDIT WINE      |
-| DELETE | /open/:id    | redirects to storage page   Delete wine           |
+| Method | URL       | Description                                       |
+| ------ | --------- | ------------------------------------------------- |
+| GET    | /open     | redirects to open wine's page                     |
+| GET    | /open/:id | redirect to wine details  magnifying glass button |
+| POST   | /open/:id | redirects to storage page   Open wine             |
+| PUT    | /open/:id | redirects to wine details page     EDIT WINE      |
+| DELETE | /open/:id | redirects to storage page   Delete wine           |
 
 
 
@@ -152,7 +151,7 @@ Wine model
 - Entry date
 - Price o gift
 - Is this wine a gift - boolean (no price to add)
-- Position in the cellar ( texto campo libre)
+- Position in the cellar (texto campo libre)
 - Comments (campo libre)
 - Image
 - Tasting Notes - open field once the wine goes to the My Tasting Galler- 
@@ -160,7 +159,7 @@ Wine model
 
 ## Links
 
-###GitHub
+## GitHub
 https://github.com/marcelavbc/villa-wine
 
 ## MOCKUPS
