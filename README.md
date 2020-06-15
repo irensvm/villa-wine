@@ -56,31 +56,79 @@ Opened bottles:
 
 
 ## ROUTES:
-|Method|URL|Description|
-|---|---|---|
-GET | /auth/login | redirects to / if user logged in. Renders auth/login
-POST | /auth/login | redirects to / if user logged in
+
+## LANDING
+| Method | URL             | Description          |
+| ------ | --------------- | -------------------- |
+| GET    | /public/landing | renders landing page |
 
 
-body:
+### AUTH
+## LOGIN
+
+| Method | URL         | Description                                                   |
+| ------ | ----------- | ------------------------------------------------------------- |
+| GET    | /auth/login | redirects to login form/ if user logged in Renders auth/login |
+| POST   | /auth/login | redirects to storage/                                         |
+
+FORM:
+    - email
+    - password
+
+## CREATE ACCOUNT
+| Method | URL                 | Description                                                                     |
+| ------ | ------------------- | ------------------------------------------------------------------------------- |
+| GET    | /auth/createaccount | redirects to create account form/ if user logged in. Renders auth/createaccount |
+| POST   | auth/createaccount  | redirect a storage page                                                         |
+
+FORM:
     - email
     - password
 
 
+## LOGOUT
+| Method | URL          | Description                                    |
+| ------ | ------------ | ---------------------------------------------- |
+| POST   | /auth/logout | redirects to landing page. Renders auth/logout |
 
-GET | /auth/signup| redirects to / if user logged in. Renders auth/createaccount
 
-```
-body:
-    - email
-    - password
+## PROFILE 
 
+| Method | URL      | Description                                  |
+| ------ | -------- | -------------------------------------------- |
+| GET    | /profile | redirects to profile page                    |
+| PUT    | /profile | redirects to profile page withe data changed |
+
+
+## STORAGE 
+
+| Method | URL              | Description                                         |
+| ------ | ---------------- | --------------------------------------------------- |
+| GET    | /storage         | redirects to storage page                           |
+| GET    | /storage/addwine | redirect to add wine form  add wine button          |
+| POST   | /storage/addwine | when the wine is created, redirect to add wine form |
+
+| GET     | /storage/:id | redirect to wine details   magnifying glass button       |
+| POST    | /storage/:id | redirects to storage page   Open wine                    |  
+| PUT     | /storage/:id | redirects to wine details page     EDIT WINE             |   
+| DELETE  | /storage/:id | redirects to storage page   Delete wine                  |  
+| GET     | /storage/    | redirect to result wines                                 |
+
+
+## OPENED WINES 
+
+| Method | URL          | Description                                       |
+| ------ | ------------ | ------------------------------------------------- |
+| GET    | /open        | redirects to open wine's page                     |
+| GET    | /open/:id    | redirect to wine details  magnifying glass button |
+| POST   | /open/:id    | redirects to storage page   Open wine             |
+| PUT    | /open/:id    | redirects to wine details page     EDIT WINE      |
+| DELETE | /open/:id    | redirects to storage page   Delete wine           |
 
 
 
 ## Models
 
-```
 User model
 - email: String
 - password: String
@@ -91,24 +139,23 @@ User model
 
 Wine model
 
-. ID
-. Name
-. Cellar
-. Year
-. Grape(s)
-. Country
-. Region
-. Type ['red', 'white', 'rose', 'sparkling', 'fortified', 'sweet', 'other']
-. Designation of Origin
-. Date of acquisition
-. Entry date
-. Price o gift
-. Is this wine a gift - boolean (no price to add)
-. Position in the cellar ( texto campo libre)
-. Comments (campo libre)
-. Image
-. Tasting Notes - open field once the wine goes to the My Tasting Gallery
-
+- ID
+- Name
+- Cellar
+- Year
+- Grape(s)
+- Country
+- Region
+- Type ['red', 'white', 'rose', 'sparkling', 'fortified', 'sweet', 'other']
+- Designation of Origin
+- Date of acquisition
+- Entry date
+- Price o gift
+- Is this wine a gift - boolean (no price to add)
+- Position in the cellar ( texto campo libre)
+- Comments (campo libre)
+- Image
+- Tasting Notes - open field once the wine goes to the My Tasting Galler- 
 
 
 ## Links
